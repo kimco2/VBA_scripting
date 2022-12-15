@@ -232,14 +232,14 @@ Greatest_Volume = ws.Cells(2, 12).Value
         'Store this value as the greatest total volume
         Greatest_Volume = ws.Cells(n, 12).Value
                   
-        'Retrieve ticker name and value associated with the greatest total volume, print into summary table, and format value
+        'Retrieve ticker name and value associated with the greatest total volume, print into summary table
         ws.Range("O4").Value = ws.Cells(n, 9).Value
         ws.Range("P4").Value = ws.Cells(n, 12).Value
             
         'Otherwise if the intital value is the greatest total volume, then...
         ElseIf Greatest_Volume <= ws.Cells(2, 12) Then
             
-       'Retrieve ticker name and value associated with the greatest total volume print to summary table, and format value
+       'Retrieve ticker name and value associated with the greatest total volume print to summary table
         ws.Range("O4").Value = ws.Cells(2, 9).Value
         ws.Range("P4").Value = ws.Cells(2, 12).Value
                                                            
