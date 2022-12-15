@@ -3,7 +3,7 @@ Module 3 homework
 
 Hello
 
-This project was created by Kim for the module 3 VBA challenge.
+This project was created by Kim for the module 2 VBA challenge.
 
 The project contains six files.
 
