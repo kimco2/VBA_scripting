@@ -1,4 +1,3 @@
-Attribute VB_Name = "Module2"
 Sub VBA_Challenge_Bonus_Part_1()
 
 '-------------------------------------------
@@ -102,15 +101,14 @@ Greatest_Volume = Cells(2, 12).Value
         'Store this value as the greatest total volume
         Greatest_Volume = Cells(n, 12).Value
                   
-        'Retrieve ticker name and value associated with the greatest total volume, print into summary table, and format value
+        'Retrieve ticker name and value associated with the greatest total volume, print into summary table
         Range("O4").Value = Cells(n, 9).Value
         Range("P4").Value = Cells(n, 12).Value
             
         'Otherwise if the intital value is the greatest total volume, then...
         ElseIf Greatest_Volume <= Cells(2, 12) Then
             
-        'Otherwise if the intital value is the greatest total volume, then ...
-        'Retrieve ticker name and value associated with the greatest total volume print to summary table, and format value
+        'Retrieve ticker name and value associated with the greatest total volume print to summary table
         Range("O4").Value = Cells(2, 9).Value
         Range("P4").Value = Cells(2, 12).Value
                                                            
