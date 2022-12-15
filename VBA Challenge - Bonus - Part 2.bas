@@ -109,8 +109,7 @@ output_table_row = 2
 'Set a variable to count the number of rows in the output table and establish the value
 Dim LastRow_table As Long
 LastRow_table = ws.Cells(Rows.Count, 1).End(xlUp).Row
-
-            'YEARLY CHANGE
+           
             'Loop through all yearly change values
             Dim j As Long
             For j = 2 To LastRow_table
@@ -120,39 +119,20 @@ LastRow_table = ws.Cells(Rows.Count, 1).End(xlUp).Row
             
                     'Change the colour of the cell to green
                     ws.Cells(j, 10).Interior.ColorIndex = 4
+                    ws.Cells(j, 11).Interior.ColorIndex = 4
             
               'Check if the yearly change is less than 0, if it is...
               ElseIf ws.Cells(j, 10).Value < 0 Then
          
                     'Change the colour of the cell to red
                     ws.Cells(j, 10).Interior.ColorIndex = 3
+                    ws.Cells(j, 11).Interior.ColorIndex = 3
     
                End If
                
         Next j
         
-            'PERCENT CHANGE
-            'Loop through all percent change values
-            Dim k As Long
-            For k = 2 To LastRow_table
             
-            
-            'Check whether percent change is greater than 0, if it is...
-              If ws.Cells(k, 11).Value > 0 Then
-            
-                    'Change the colour of the cell to green
-                    ws.Cells(k, 11).Interior.ColorIndex = 4
-            
-              'Check if the percent change is less than 0, if it is...
-              ElseIf ws.Cells(k, 11).Value < 0 Then
-         
-                    'Change the colour of the cell to red
-                    ws.Cells(k, 11).Interior.ColorIndex = 3
-    
-               End If
-               
-        Next k
-  
 '-------------------------------------------
 'BONUS SECTION - part 1
 'Add functionality to your script to return the stock with the "Greatest % increase", "Greatest % decrease", and "Greatest total volume"
